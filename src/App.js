@@ -27,6 +27,7 @@ function App() {
             <img src={url} className="object" alt="cat" />
           )}
         </div>
+
         <div className="button" id="button" onClick={makeRequest}>
           😸
         </div>
