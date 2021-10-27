@@ -13,7 +13,7 @@ function App() {
         setLoader(true);
         setTimeout(() => {
           setLoader(false);
-        }, 1000);
+        }, 2000);
         setUrl(data.url);
       });
   };
@@ -22,7 +22,7 @@ function App() {
       <header className="App-header">
         <div className="border">
           {loader ? (
-            <div className="spinner-3"></div>
+            <div className="spinner-4"></div>
           ) : (
             <img src={url} className="object" alt="cat" />
           )}

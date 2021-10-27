@@ -89,15 +89,27 @@
     background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
   }
 }
-.spinner-3 {
+.spinner-4 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: conic-gradient(#0000 10%, #61dafb);
-  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
-  animation: s3 1s infinite linear;
+  padding: 1px;
+  background: conic-gradient(#0000 10%, #61dafb) content-box;
+  -webkit-mask: repeating-conic-gradient(
+      #0000 0deg,
+      #000 1deg 20deg,
+      #0000 21deg 36deg
+    ),
+    radial-gradient(
+      farthest-side,
+      #0000 calc(100% - 9px),
+      #000 calc(100% - 8px)
+    );
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: s4 1s infinite steps(10);
 }
-@keyframes s3 {
+@keyframes s4 {
   to {
     transform: rotate(1turn);
   }
