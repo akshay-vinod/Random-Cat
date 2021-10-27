@@ -1,19 +1,21 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
 
 function App() {
+  const [url, setUrl] = useState(
+    "https://www.prestigeanimalhospital.com/sites/default/files/interesting-cat-facts.jpg"
+  );
+  const makeRequest = () => {
+    console.log("hai");
+  };
   return (
     <div className="App">
       <header className="App-header">
         <div className="border">
-          <img
-            src="https://www.prestigeanimalhospital.com/sites/default/files/interesting-cat-facts.jpg"
-            className="object"
-            alt="cat"
-          />
+          <img src={url} className="object" alt="cat" />
         </div>
-        <button class="button-57" role="button">
-          <span class="text">Click</span>
+        <button className="button-57" role="button" onClick={makeRequest}>
+          <span className="text">Click</span>
           <span>Random Cat</span>
         </button>
       </header>
