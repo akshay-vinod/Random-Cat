@@ -13,8 +13,8 @@ function App() {
         setLoader(true);
         setTimeout(() => {
           setLoader(false);
-          setUrl(data.url);
         }, 1000);
+        setUrl(data.url);
       });
   };
   return (
@@ -27,10 +27,9 @@ function App() {
             <img src={url} className="object" alt="cat" />
           )}
         </div>
-        <button className="button-57" role="button" onClick={makeRequest}>
-          <span className="text">Click</span>
-          <span>Random Cat</span>
-        </button>
+        <div className="button" id="button" onClick={makeRequest}>
+          😸
+        </div>
       </header>
     </div>
   );
